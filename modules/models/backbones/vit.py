@@ -55,7 +55,6 @@ class TransformerEncoderLayer(nn.Module):
         return x
 
 
-
 class VisionTransformer(nn.Module):
     def __init__(self, structure_type, img_size=224, patch_size=16, in_channels=3, embed_dims=768, num_layers=12,
                  num_heads=12, mlp_ratio=4, out_indices=(9, 14, 19, 23), qkv_bias=True,
@@ -196,7 +195,6 @@ class VisionTransformer(nn.Module):
                 raise ValueError('Unexpected shape of pos_embed, got {}.'.format(pos_embed.shape))
             pos_embed = self.resizeposembed(pos_embed, hw_shape, (pos_h, pos_w), self.interpolate_mode)
         return self.drop_after_pos(patched_img + pos_embed)
-
 
     @staticmethod
     def resizeposembed(pos_embed, input_shpae, pos_shape, mode):
