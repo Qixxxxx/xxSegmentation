@@ -19,8 +19,8 @@ class LeNet5(nn.Module):
         x = self.pool1(self.relu(self.conv1(x)))
         x = self.pool2(self.relu(self.conv2(x)))
         x = x.view(-1, 16 * 4 * 4)
-        x = nn.ReLU(self.fc1(x))
-        x = nn.ReLU(self.fc2(x))
+        x = self.relu(self.fc1(x))
+        x = self.relu(self.fc2(x))
         x = self.fc3(x)
         return x
 
