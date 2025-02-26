@@ -12,7 +12,6 @@ from bricks import BuildNormalization, MultiheadAttention, PatchEmbed, FFN
 DEFAULT_MODEL_URLS = {
     'jx_vit_large_p16_384': 'https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_large_p16_384-b3be5167.pth',
 }
-'''AUTO_ASSERT_STRUCTURE_TYPES'''
 AUTO_ASSERT_STRUCTURE_TYPES = {
     'jx_vit_large_p16_384': {
         'patch_size': 16, 'embed_dims': 1024, 'num_layers': 24, 'num_heads': 16, 'mlp_ratio': 4,
