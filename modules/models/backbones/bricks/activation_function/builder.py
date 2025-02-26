@@ -1,11 +1,11 @@
 import torch.nn as nn
 
+from modules.models.backbones.bricks.activation_function.hardsigmoid import HardSigmoid
+from modules.models.backbones.bricks.activation_function.hardswish import HardSwish
+from modules.models.backbones.bricks.activation_function.swish import Swish
 from utils import BaseModuleBuilder
-from modules.models.backbones.activation_function.swish import Swish
-from modules.models.backbones.activation_function.hardswish import HardSwish
-from modules.models.backbones.activation_function.hardsigmoid import HardSigmoid
 
-'''ActivationBuilder'''
+
 class ActivationBuilder(BaseModuleBuilder):
     REGISTERED_MODULES = {
         'ReLU': nn.ReLU, 'GELU': nn.GELU, 'ReLU6': nn.ReLU6, 'PReLU': nn.PReLU,
@@ -16,7 +16,7 @@ class ActivationBuilder(BaseModuleBuilder):
                      'Mish', 'Softplus', 'Softshrink', 'Softsign', 'Tanh', 'Tanhshrink', 'Threshold']:
         if hasattr(nn, act_type):
             REGISTERED_MODULES[act_type] = getattr(nn, act_type)
-    '''build'''
+
     def build(self, act_cfg):
         if act_cfg is None: return nn.Identity()
         return super().build(act_cfg)

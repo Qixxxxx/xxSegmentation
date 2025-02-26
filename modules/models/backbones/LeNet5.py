@@ -1,6 +1,6 @@
 from torch import nn
 
-from activation_function import BuildActivation
+from modules.models.backbones.bricks.activation_function import BuildActivation
 
 
 class LeNet5(nn.Module):
@@ -23,7 +23,6 @@ class LeNet5(nn.Module):
         x = self.relu(self.fc2(x))
         x = self.fc3(x)
         return x
-
 
 
 if __name__ == '__main__':
