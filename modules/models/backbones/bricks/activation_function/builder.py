@@ -12,7 +12,7 @@ class ActivationBuilder(BaseModuleBuilder):
         'Sigmoid': nn.Sigmoid, 'HardSwish': HardSwish, 'LeakyReLU': nn.LeakyReLU,
         'HardSigmoid': HardSigmoid, 'Swish': Swish,
     }
-    for act_type in ['ELU', 'Hardshrink', 'Hardtanh', 'LogSigmoid', 'RReLU', 'SELU', 'CELU', 'SiLU', 'GLU', 'GELU',
+    for act_type in ['ELU', 'Hardshrink', 'Hardtanh', 'LogSigmoid', 'RReLU', 'SELU', 'CELU', 'SiLU', 'GLU',
                      'Mish', 'Softplus', 'Softshrink', 'Softsign', 'Tanh', 'Tanhshrink', 'Threshold']:
         if hasattr(nn, act_type):
             REGISTERED_MODULES[act_type] = getattr(nn, act_type)
