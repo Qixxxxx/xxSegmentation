@@ -1,7 +1,7 @@
 import torch.nn as nn
 
-from modules.models.backbones.bricks.activation_function import BuildActivation
-from modules.models.backbones.bricks.miscellaneous import makedivisible
+from modules.bricks.activation_function import BuildActivation
+from modules.bricks.miscellaneous import makedivisible
 
 
 class SqueezeExcitationConv2d(nn.Module):

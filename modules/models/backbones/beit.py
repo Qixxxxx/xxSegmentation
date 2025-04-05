@@ -7,7 +7,7 @@ import torch.nn.functional as F
 import torch.utils.model_zoo as model_zoo
 from scipy import interpolate
 
-from bricks import BuildNormalization, PatchEmbed, BuildDropout
+from modules.bricks import BuildNormalization, PatchEmbed, BuildDropout
 from vit import TransformerEncoderLayer as VisionTransformerEncoderLayer
 
 DEFAULT_MODEL_URLS = {

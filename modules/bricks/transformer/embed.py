@@ -5,7 +5,7 @@ import math
 import torch.nn as nn
 import torch.nn.functional as F
 
-from modules.models.backbones.bricks.normalization import BuildNormalization
+from modules.bricks.normalization import BuildNormalization
 
 
 class AdaptivePadding(nn.Module):
@@ -38,9 +38,11 @@ class AdaptivePadding(nn.Module):
 
     @staticmethod
     def totuple(x):
-        if isinstance(x, int): return (x, x)
+        if isinstance(x, int):
+            return (x, x)
         assert isinstance(x, collections.abc.Sequence) and (len(x) == 2)
-        for n in x: assert isinstance(n, int)
+        for n in x:
+            assert isinstance(n, int)
         return tuple(x)
 
 

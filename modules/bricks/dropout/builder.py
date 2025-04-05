@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from modules.models.backbones.bricks.dropout.droppath import DropPath
+from .droppath import DropPath
 from utils import BaseModuleBuilder
 
 
@@ -10,7 +10,8 @@ class DropoutBuilder(BaseModuleBuilder):
     }
 
     def build(self, dropout_cfg):
-        if dropout_cfg is None: return nn.Identity()
+        if dropout_cfg is None:
+            return nn.Identity()
         return super().build(dropout_cfg)
 
 

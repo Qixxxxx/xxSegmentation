@@ -1,7 +1,7 @@
 import torch.nn as nn
 
-from modules.models.backbones.bricks.activation_function import BuildActivation
-from modules.models.backbones.bricks.normalization import BuildNormalization
+from ..activation_function import BuildActivation
+from ..normalization import BuildNormalization
 
 
 class DepthwiseSeparableConv2d(nn.Module):

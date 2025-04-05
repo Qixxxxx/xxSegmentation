@@ -1,9 +1,9 @@
 import torch.nn as nn
 
-from modules.models.backbones.bricks.activation_function import BuildActivation
-from modules.models.backbones.bricks.convolution.apconv import AdptivePaddingConv2d
-from modules.models.backbones.bricks.convolution.seconv import SqueezeExcitationConv2d
-from modules.models.backbones.bricks.normalization import BuildNormalization
+from modules.bricks.activation_function import BuildActivation
+from modules.bricks.convolution.apconv import AdptivePaddingConv2d
+from modules.bricks.convolution.seconv import SqueezeExcitationConv2d
+from modules.bricks.normalization import BuildNormalization
 
 
 class InvertedResidual(nn.Module):

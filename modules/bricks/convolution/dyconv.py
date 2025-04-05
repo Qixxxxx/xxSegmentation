@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from modules.models.backbones.bricks.activation_function import BuildActivation
-from modules.models.backbones.bricks.normalization import BuildNormalization
+from modules.bricks.activation_function import BuildActivation
+from modules.bricks.normalization import BuildNormalization
 
 
 class Attention2d(nn.Module):

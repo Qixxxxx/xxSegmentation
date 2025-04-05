@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 
-from modules.models.backbones.bricks.activation_function import BuildActivation
-from modules.models.backbones.bricks.dropout import BuildDropout
+from modules.bricks.activation_function import BuildActivation
+from modules.bricks.dropout import BuildDropout
 
 
 class FFN(nn.Module):

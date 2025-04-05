@@ -3,8 +3,8 @@ import math
 import torch.nn as nn
 import torch.nn.functional as F
 
-from modules.models.backbones.bricks.activation_function import BuildActivation
-from modules.models.backbones.bricks.normalization import BuildNormalization
+from ..activation_function import BuildActivation
+from ..normalization import BuildNormalization
 
 
 class AdptivePaddingConv2d(nn.Conv2d):

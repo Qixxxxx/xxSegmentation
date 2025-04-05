@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from modules.models.backbones.bricks.dropout import BuildDropout
+from modules.bricks.dropout import BuildDropout
 
 
 class MultiheadAttention(nn.Module):

@@ -7,7 +7,7 @@ import torch.nn.functional as F
 import torch.utils.checkpoint as checkpoint
 import torch.utils.model_zoo as model_zoo
 
-from bricks import BuildNormalization, MultiheadAttention, PatchEmbed, FFN
+from modules.bricks import BuildNormalization, MultiheadAttention, PatchEmbed, FFN
 
 DEFAULT_MODEL_URLS = {
     'jx_vit_large_p16_384': 'https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_large_p16_384-b3be5167.pth',
